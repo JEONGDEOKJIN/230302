@@ -1,0 +1,231 @@
+
+.category {
+    display: flex;
+    flex-direction: column;
+
+    /* background-color: rgb(8, 12, 245); */
+    
+    /* border: 1px solid; */
+    width: 600px;
+    height: 500px;
+
+    
+
+    /* border-collapse: collapse; */
+}
+
+
+/* 목차 항목 class css */
+.item_toc{
+    display: flex;
+    
+    background-color: lightgray;
+    
+    width: 600px;
+    height: 50px;
+
+    /* ⭐⭐⭐ 이걸 해야 삐져나가지 않음 ⭐⭐⭐  */
+    box-sizing: border-box;
+
+    border: 1px solid;
+    border-top: 0;
+    border-left: 0;
+
+}
+
+
+.item_toc_number {
+    /* ⭐⭐⭐ 1 이라는 글자가 정렬되고 싶으면 -> 그 위의 부모 태그에 flex 먹임 ⭐⭐⭐  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 60px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+
+
+    box-sizing: border-box;
+    border: 1px solid;
+    border-right: 0;
+    border-bottom: 0;
+
+
+    
+}
+
+
+.item_toc_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 440px;
+    height: 50px;
+    
+    box-sizing: border-box;
+    border: 1px solid;
+    border-collapse: collapse;
+    border-right: 0;
+    border-bottom: 0;
+
+
+}
+
+.item_toc_file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 80px;
+    height: 50px;
+
+    box-sizing: border-box;
+    border: 1px solid;
+    border-collapse: collapse;
+    border-right: 0;
+    border-bottom: 0;
+
+
+    
+}
+
+.item_toc_createdate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100px;
+    height: 50px;
+
+    box-sizing: border-box;
+    border: 1px solid;
+    border-collapse: collapse;
+    border-right: 0;
+    border-bottom: 0;
+
+
+}
+
+.item_toc_view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 70px;
+    height: 50px;
+    /* background-color: blue; */
+
+    box-sizing: border-box;
+    border: 1px solid;
+    border-collapse: collapse;
+    border-bottom: 0;
+    border-right: 0;
+
+
+    
+}
+
+/* 일반 항목 class css */
+
+.item {
+    display: flex;
+
+    /* background-color: beige; */
+
+    width: 600px;
+    height: 50px;
+
+    box-sizing: border-box;
+    border: 1px solid;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+
+    
+
+}
+
+.item_number {
+    /* ⭐⭐⭐ 1 이라는 글자가 정렬되고 싶으면 -> 그 위의 부모 태그에 flex 먹임 ⭐⭐⭐  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    border: 1px solid;
+    border-top: 0;
+    border-right: 0;
+
+}
+
+.item_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid;
+    width: 440px;
+    height: 50px;
+
+    box-sizing: border-box;
+    border-collapse: collapse;
+    border-top: 0;
+    border-right: 0;
+
+}
+
+.item_file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid;
+    width: 80px;
+    height: 50px;
+
+    
+    box-sizing: border-box;
+    border-collapse: collapse;
+    border-top: 0;
+    border-right: 0;
+
+}
+
+.item_createdate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid;
+    width: 100px;
+    height: 50px;
+
+    box-sizing: border-box;
+    border-collapse: collapse;
+    border-top: 0;
+    border-right: 0;
+
+}
+
+.item_view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid;
+    width: 70px;
+    height: 50px;
+    /* background-color: blue; */
+
+    box-sizing: border-box;
+    border-collapse: collapse;
+    border-top: 0;
+
+}

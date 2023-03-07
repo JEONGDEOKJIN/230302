@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+
+<!-- 스타일 주는 법 
+        1. 1교시는 타이핑 하나 하나 
+        2. 지금은 sytle 태그 --> 
+
+        <!-- 태그들의 속성을 작성하고, 한번에 적용시켜줄 수 있음.
+            id 선택자는 css 작성해서 # 을 앞에 붙여준다. 
+            id 스타일 속성을 우선으로 한다. 
+        -->
+        <style> 
+            /*id 선택자는 css 작성해서 # 을 앞에 붙여준다. */
+            #test{
+                color: red;
+            }
+
+
+            /* class 선택자는 css 작성해서, . 을 이름의 앞에 붙여준다.  */
+            .block7{ 
+                color: blue;
+            }
+
+            /* 두 번 쓰면, 덮어 씌워짐 / 두 번째 게 됨 */
+            .block7{
+                color: aqua;
+
+            }
+
+            /*  * 선택자는 모든 태그에, 스타일을 적용시킨다.   */
+            *{
+                color: green;
+                
+            }
+
+            /* 태그 선택자 : 태그 이름으로도 스타일을 줄 수 있다. */
+            div{
+                color: brown;
+            }
+
+            /* 여러 태그에 속성을 같이 적용 시킬 때  */
+            div, h1{
+                color: yellow;
+            }
+
+
+
+            /* 자식 선택자 */
+                /* 부모 태그 div의 p 자식 태그 선택자 
+                div 안에 있는 p 태그를 선택하고 싶을 때 
+                부모님 div 안에 있는 자식 p 태그에 스타일 주고 싶을 때*/
+            div p{
+                /* 자식 그 잡고 싶으면 한칸 띄고 */
+                
+            }
+                /* 자식 선택자 예시 (클래스 잡기) */
+            .test .content{
+                /* test 클래스 자식 태그 중 contents 클래스를 갖고 있는 태그 */
+
+                /* 
+                <div class="test"> 
+                    <div class="content"> 
+                        이 자식 태그가 스타일이 적용됨. 
+                    <div> 
+                </div> 
+                */
+
+
+            }
+
+                /* test 클래스와 content 클래스 둘 다 가지고 있는 태그 */
+            .test.content {
+                /* 두 가지 클래스를 모두 가지고 있을때! 적용 */
+                /* 속성은 하나만 쓰고, 한칸을 띄고, 두 번째 클래스 이름 쓴다.  */
+                /* <div class="test content"> <div> */
+
+            }
+
+                /* 자식 태그 중 해당 클래스를 가지고 있고, 바로 아래 자식일 때*/
+            .test > .content{
+                /* test 클래스를 갖고 있는 태그 자식 중, contents 클래스 갖고 있는 자식 중 
+                    제일 첫 번째 자식 */
+
+                /* 
+                <div class="test"> 
+                    
+                    <div class="content"> 
+                        요놈에만! ⭐⭐⭐ 적용된다. 
+                        자식 태그 중 첫 번째에만! 
+                        </div> 
+                    <div class="content"> 
+                        요놈들에는 적용 안 돼
+                        요기에 하려면❓❓❓❓❓ 
+                        </div>
+                    <div class="content"> 
+                        요놈들에는 적용 안 돼
+                        </div>
+                    
+
+
+                </div>
+                <div> </div> 
+
+
+                
+                */
+            }
+
+        </style>
+
+
+
+</head>
+<body>
+    
+    <!-- id 선택자 임
+            id 선택자는 문서 안에서 한 번만 적용된다. 
+            중복되면 안 됨. 
+            스타일을 지정하거나 레이아웃 지정해주거나 
+            이후, 자바스크립트를 사용할 때, 이후 웹 요소를 구분할 때 사용 
+            이건 이름 하나 하나 임 / 그러니까 한명 밖에 없음.    -->
+   
+            <!-- 지금 이거는 중복된 건데, class  vs id 중복이면 되는 건, id 가 먼저 적용됨.  -->
+            <!-- <div id = "test" class="block7"> 지금 이거는 중복된 건데, 중복되는 건, id 가 먼저 적용됨.  </div> -->
+
+    <!-- class 선택자 
+            같은 태그라도, 다른 스타일을 적용할 때, class 사용 
+            태그 class 이름 중복 되어도 무방
+            블록체인 7시 손드세요~ 라고 하면 다 손들어야 함 
+             -->
+
+             <!-- class 중복시 -> 아래것이 나옴 -->
+             <!-- <div class="block7"> 이거는 class 를 적용한거임. / 그리고 class 가 중복되면 덮어씌여진것임 </div> -->
+
+<div> 7시 </div id = "test">
+<div> 7시 </div>
+<div> 7시 </div>
+<div> 7시 </div>
+<div> 7시 </div>
+<div> 7시 </div>
+<div> 7시 </div>
+
+<h1> h1 7시 </h1>
+<h2> h2 쓴거 7시 </h2>
+
+
+
+</body>
+</html>

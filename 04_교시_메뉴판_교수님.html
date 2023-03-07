@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴판</title>
+
+    <style> 
+        /* class 로 작성할 때 
+                실익 : 동일한 녀석들은 한번에 바꿀 수 있음.  */
+        .item{
+            /* flex 활용 - 가운데로 보기 - 개발자 도구 활용해서 넣기✅ */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            /* 보기 편하게 가이드 라임  */
+            border: 1px solid;
+            /* 기본 */
+            width: 300px;
+            padding: 5px;
+
+        }
+
+        /* 태그 이름 선택자 */
+        img{
+            width: 250px;
+        }
+
+        /* 태그로 잡기
+            vh❓❓❓  */
+        body {
+            width: 100%;
+            height: 100vh;
+
+        }
+
+
+        /* id 선택자 */
+        #content{
+            
+            width: 80%;
+            height: 100%;
+            background-color: green;
+
+
+            /* 사방 모서리 부분을 타원으로 */
+            border-radius: 20px;
+
+            /* css 에서 calc (수치 연산) 을 추가할 수 있음. ⭐⭐⭐  */
+            /* margin: calc(100% - 80%); */
+
+            /* margin: 50px; */
+            
+            border: 1px solid;
+
+            /* wrap 으로 덮은 상태에서 넣어줌 */
+            padding: 50px;
+
+        }
+
+        #wrap {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            
+            /* 이거 안 된다 📛📛📛📛📛  */
+            flex-wrap: wrap;
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+    
+<!-- 1. 메뉴 하나 만들기  
+            필요한 것
+            - 이미지
+            - 제목 
+            - 서브제목 
+        
+            메뉴는 여러개임. -> 여러개니까 class 반 처럼 만들자 -> item 이 여러개일거야!!
+       
+            - 클래스 하면 좋은 점 
+                하나만 바껴도 -> 모든게 바뀔 수 있음.⭐⭐⭐⭐⭐ 
+        -->
+
+        <!-- 하나니까 id / class 를 주로 씀 -->
+        <div id="content">
+            <div id = "wrap"> 
+                
+                <!-- 메뉴들 -->
+                <div class="item">
+                    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMDhfMTIx%2FMDAxNjA0ODM5ODc4MDk1.uR5yde6JiRY8C8DC-tjYV7lrTE7a3vtY0b60P8thfMQg.UWVtlyVysiwNwA-0LRQpQKeeYMKZiIZOXX3_D87Z2Vsg.JPEG.manji0918%2F20201107_190319.jpg&type=sc960_832" alt="슬램덩크 이미지">
+                    <h1> 볶음밥 </h1>    
+                    <h2> 5000원 </h2>
+                    <h3> 블라블라 </h3>
+                </div>
+                <div class="item">
+                    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMDhfMTIx%2FMDAxNjA0ODM5ODc4MDk1.uR5yde6JiRY8C8DC-tjYV7lrTE7a3vtY0b60P8thfMQg.UWVtlyVysiwNwA-0LRQpQKeeYMKZiIZOXX3_D87Z2Vsg.JPEG.manji0918%2F20201107_190319.jpg&type=sc960_832" alt="슬램덩크 이미지">
+                    <h1> 볶음밥 </h1>    
+                    <h2> 5000원 </h2>
+                    <h3> 블라블라 </h3>
+                </div>
+                <div class="item">
+                    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMDhfMTIx%2FMDAxNjA0ODM5ODc4MDk1.uR5yde6JiRY8C8DC-tjYV7lrTE7a3vtY0b60P8thfMQg.UWVtlyVysiwNwA-0LRQpQKeeYMKZiIZOXX3_D87Z2Vsg.JPEG.manji0918%2F20201107_190319.jpg&type=sc960_832" alt="슬램덩크 이미지">
+                    <h1> 볶음밥 </h1>    
+                    <h2> 5000원 </h2>
+                    <h3> 블라블라 </h3>
+                </div>
+                <div class="item">
+                    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMDhfMTIx%2FMDAxNjA0ODM5ODc4MDk1.uR5yde6JiRY8C8DC-tjYV7lrTE7a3vtY0b60P8thfMQg.UWVtlyVysiwNwA-0LRQpQKeeYMKZiIZOXX3_D87Z2Vsg.JPEG.manji0918%2F20201107_190319.jpg&type=sc960_832" alt="슬램덩크 이미지">
+                    <h1> 볶음밥 </h1>    
+                    <h2> 5000원 </h2>
+                    <h3> 블라블라 </h3>
+                </div>
+                <div class="item">
+                    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMDhfMTIx%2FMDAxNjA0ODM5ODc4MDk1.uR5yde6JiRY8C8DC-tjYV7lrTE7a3vtY0b60P8thfMQg.UWVtlyVysiwNwA-0LRQpQKeeYMKZiIZOXX3_D87Z2Vsg.JPEG.manji0918%2F20201107_190319.jpg&type=sc960_832" alt="슬램덩크 이미지">
+                    <h1> 볶음밥 </h1>    
+                    <h2> 5000원 </h2>
+                    <h3> 블라블라 </h3>
+                </div>
+                <div class="item">
+                    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMDhfMTIx%2FMDAxNjA0ODM5ODc4MDk1.uR5yde6JiRY8C8DC-tjYV7lrTE7a3vtY0b60P8thfMQg.UWVtlyVysiwNwA-0LRQpQKeeYMKZiIZOXX3_D87Z2Vsg.JPEG.manji0918%2F20201107_190319.jpg&type=sc960_832" alt="슬램덩크 이미지">
+                    <h1> 볶음밥 </h1>    
+                    <h2> 5000원 </h2>
+                    <h3> 블라블라 </h3>
+                </div>
+            </div>
+            
+
+
+        </div>
+
+
+
+
+</body>
+</html>

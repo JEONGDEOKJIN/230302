@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- ✅ 칸 가이드를 먼저 잡기 / flex 를 사용 
+            1) 전체 칸 하나 : border 해야 함 
+            2) 그 밑에, 시간표 가로 줄 큰거 하나 
+            3) 그 밑에, 사각형 6개   
+                 -->
+
+<!-- display: flex; -->
+<!-- display:inline-block; -->
+        
+        <!-- 전체 영역 -->
+        <div style="width: 1200px; height: 2400px; border: 1px solid;"> 
+
+            <!-- 가로줄 박스  -->
+            <div style="width: 1200px; height: 500px; border: 1px solid;">  </div>
+
+            <!-- 밑에 박스 첫 번째 줄 3개 
+                    ✅ flex 모드를 추가해줘야 해! 
+                        ❓ 개발자 모드에서 바꾸고 -> vscode 에 바로 변경하는 방법은? 
+                            
+                        justify-content: space-between;                
+                
+                -->
+            <div style="width: 1200px; height: 2000px; border: 1px solid; display: flex; 
+                flex-direction: row;
+                align-content: flex-start;
+                justify-content: center;
+                flex-wrap: wrap;
+                ">  
+            
+                <div style="width: 300px; height: 300px; border: 1px solid; display: flex;">
+                    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMDhfMTIx%2FMDAxNjA0ODM5ODc4MDk1.uR5yde6JiRY8C8DC-tjYV7lrTE7a3vtY0b60P8thfMQg.UWVtlyVysiwNwA-0LRQpQKeeYMKZiIZOXX3_D87Z2Vsg.JPEG.manji0918%2F20201107_190319.jpg&type=sc960_832" alt="슬램덩크 이미지">
+                    
+                    <p> 새우볶음밥 </p>
+                    <p> 새우볶음밥 </p>
+                    <p> 새우볶음밥 </p>
+                </div>
+
+                <div style="width: 300px; height: 300px; border: 1px solid;">
+                    새우볶음밥 <br>
+                    7.0 <br>
+                    설명 : 맛좋음 <br>
+    
+                </div>
+
+                <div style="width: 300px; height: 300px; border: 1px solid;">
+                    새우볶음밥 <br>
+                    7.0 <br>
+                    설명 : 맛좋음 <br>
+    
+                </div>
+    
+                <div style="width: 300px; height: 300px; border: 1px solid;"> 
+                    두 번째 메뉴 
+                    가격 
+                    설명 
+                </div>
+
+                <div style="width: 300px; height: 300px; border: 1px solid;"> 
+                    두 번째 메뉴 
+                    가격 
+                    설명 
+                </div>
+
+                <div style="width: 300px; height: 300px; border: 1px solid;"> 
+                    두 번째 메뉴 
+                    가격 
+                    설명 
+                </div>
+            
+            </div>
+
+
+            
+
+
+
+        </div>            
+
+</body>
+</html>

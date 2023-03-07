@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 지금까지 한 내용 
+        1. 자주 쓰는 태그 
+        div, p, h1~h6, span, br, img, table, a
+        자주 써볼 것 
+    
+    오늘 : 스타일 속성 주는 것 해보기 
+    attribute 속성을 style 로 -->
+
+
+        <!-- div 태그의 속성으로 style 이 나옴. 
+                여기에서 style = cascading style sheet 의미 = CSS  -->
+        <div style="
+            /* div 태그의 가로 너비, '관련속성' 으로 max-width, min-width 이 있음. */
+            width: 100%; 
+            /*  div 태그의 세로 높이, '관련속성'으로 max-height, min-height 이 있음.  */
+            height: 60px; 
+            
+            background-color: black; 
+            /* 태그 내부의 여백 */
+            padding: 0; 
+            /* 태그 외부의 여백 */
+            margin: 0; 
+            /* box size 잴 때, 어디까지를 기준으로 잴 것 인가. 
+                    ex) border 포함해서? boder 제외하고?  */
+            box-sizing: border-box; "> </div>
+
+
+    <!-- 🔵 
+    style 속성 = css(cascading style sheet의 약자) <br>
+    width : 너비, max-width, min-width <br>
+    height : 높이, max-height, min-height <br>
+    background-color : 배경색, 색상을 입힐 수 있음. rgb(255,255,255) <br>
+    
+    padding (태그 의 내부 여백), margin (태그의 외부 여백) 
+        하위 인자는 top, right, bottom, left 순서임. 
+        0 을 하나만 쓰면 -> 4방면이 다 적용됨 ex) padding: 0;
+        각각 주고 싶으면 -> padding: 0 0 0 0;
+        2개를 주고 싶으면 -> top bottom, left right 가 짝지어짐 -> padding: 0 0 ; / 상하 = 0 좌우 = 0 
+    
+    box-sizing : 박스의 크기를 어떻게 설정할지 기준을 정함 
+        div 를 만들고 - border 를 그림 - 1px 이 포함될지 안 될지 여부를 결정하는 속성 
+    
+-->
+
+
+    <!-- 🔵 div 는 블록 요소를 가짐
+        div 를 쓰면 display block 이 생김 -->
+
+    <!--display block 없애기  -->
+
+    <!-- div 의 부모를 바꿔서 block 이해하기 -->
+    <div style="width: 500px;">
+        <div style="display: block;"> </div>
+    </div>
+    <!-- 속성을 추가 할 때 
+            속성명 = "속성 값" 
+            display 는 영역 노출의 크기를 어떻게 설정할지 기준을 설정함. 
+                1) 한줄을 차지할지, 아니면 2) 옆에 태그에게 양보해줄지! 에 대한 크기 설정을 함. 
+                
+                '한줄' 이란? 
+                    부모 태그를 기준으로, 모든 너비를 차지 한다. 높이는 자식을 기준으로. 
+                    div 는 body 안에 있어서
+                -->
+
+
+    <!-- 🔵 두 번째, 
+            이렇게 하면 -> 자기가 작더라도 - 부모의 크기를 자신이 가져서 - 떨어지게 됨 
+            인라인 블록 먹이면 -> 자신의 크기 만큼 차지 함 -->
+    <div style="width: 100%;">
+        <div style="width: 200px; height: 200px; border: 1px solid; display:inline-block; "> </div>
+        <div style="width: 200px; height: 200px; border: 1px solid; display:inline-block;"> </div>
+    </div>
+
+
+    <!-- 🔵 세 번째, 
+            display: flex ⭐⭐⭐⭐⭐ (편하고 많이 사용하게 됨) 
+            display block 임에도 나열됨. 
+
+            ⭐⭐⭐ 박스 눌러서 확인하기 
+            wrap 이면 -> 자동으로 떨어짐 
+                부모보다 자식이 작아지면 -> 밑으로 떨어짐 
+                -->
+    <div style="display: flex;">
+        <div style="width: 200px; height: 200px; border: 1px solid;"> </div>
+        <div style="width: 200px; height: 200px; border: 1px solid;"> </div>
+        <div style="width: 200px; height: 200px; border: 1px solid;"> </div>
+        <div style="width: 200px; height: 200px; border: 1px solid;"> </div>
+        <div style="width: 200px; height: 200px; border: 1px solid;"> </div>
+        <div style="width: 200px; height: 200px; border: 1px solid;"> </div>
+        <div style="width: 200px; height: 200px; border: 1px solid;"> </div>
+        <div style="width: 200px; height: 200px; border: 1px solid;"> </div>
+    </div>
+
+
+    <!-- 🔵 color - 글자의 색깔-->
+    <div>
+
+        <h1 style="color : red"> 경일 게임 아카데미 </h1>
+        <h2 style="color : blue"> 경일 게임 아카데미 </h2>
+        <h3 style="color : aqua"> 경일 게임 아카데미 </h3>
+    </div>
+
+    <!-- 🔵 정리 (여기까지 1교시)
+            1. div 를 부모 - 자식 관계로 쓸 때, div 에는 기본적으로, display - block 이 생김 
+                    
+        -->
+
+    <p> </p>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
